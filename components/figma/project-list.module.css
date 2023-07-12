@@ -1,0 +1,162 @@
+.projectimageIcon {
+  border-radius: var(--br-8xs);
+  width: 310px;
+  height: 173px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.titlecard {
+  position: relative;
+  font-weight: 600;
+}
+.text,
+.textbutton {
+  position: relative;
+  color: var(--white);
+}
+.text {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  width: 303px;
+}
+.textbutton {
+  font-size: var(--buttontext-size);
+  font-weight: 600;
+  font-family: var(--buttontext);
+  text-align: left;
+}
+.buttoncontained {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xs) var(--padding-6xl);
+  background-color: var(--primary-colour);
+  border-radius: var(--br-5xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.buttoncontained:hover {
+  opacity: 0.8;
+}
+.textbutton1 {
+  position: relative;
+  font-size: var(--buttontext-size);
+  font-weight: 600;
+  font-family: var(--buttontext);
+  color: var(--white);
+  text-align: left;
+}
+.buttonlinkstoproject,
+.buttonoutline,
+.cardproject {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.buttonoutline {
+  cursor: pointer;
+  border: 2px solid var(--primary-colour);
+  padding: var(--padding-xs) var(--padding-6xl);
+  background-color: transparent;
+  border-radius: var(--br-5xs);
+}
+.buttonlinkstoproject,
+.cardproject {
+  gap: var(--gap-3xs);
+}
+.cardproject {
+  border-radius: var(--br-8xl);
+  background-color: var(--cardbackground);
+  width: 404px;
+  height: 500px;
+  flex-direction: column;
+  padding: var(--padding-base) 0;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+}
+.projectimageIcon1 {
+  border-radius: var(--br-8xs);
+  width: 310px;
+  height: 173px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.text1 {
+  position: relative;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+  display: inline-block;
+  width: 303px;
+}
+.buttoncontained1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xs) var(--padding-6xl);
+  background-color: var(--primary-colour);
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+}
+.buttoncontained1,
+.cardproject1,
+.projectlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardproject1 {
+  border-radius: var(--br-8xl);
+  background-color: var(--cardbackground);
+  width: 404px;
+  height: 500px;
+  flex-direction: column;
+  padding: var(--padding-base) 0;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+}
+.projectlist {
+  width: 1264px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-7xl);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--primary-colour);
+  font-family: var(--buttontext);
+}
+@media screen and (max-width: 1200px) {
+  .text,
+  .textbutton {
+    font-size: var(--buttontext-size);
+  }
+}
+@media screen and (max-width: 960px) {
+  .cardproject1 {
+    width: auto;
+    align-self: unset;
+    padding-left: var(--padding-13xl);
+    padding-top: var(--padding-base);
+    padding-right: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+  .projectlist {
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 720px) {
+  .cardproject,
+  .cardproject1 {
+    width: 360px;
+    height: 450px;
+  }
+}

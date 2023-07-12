@@ -1,0 +1,22 @@
+.header,
+.landinginit {
+  display: flex;
+  align-items: center;
+}
+.header {
+  align-self: stretch;
+  background-color: #181824;
+  height: 65px;
+  flex-direction: row;
+  padding: 19px 160px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.landinginit {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+}

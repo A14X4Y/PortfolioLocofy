@@ -1,0 +1,46 @@
+.title {
+  position: relative;
+  font-weight: 600;
+}
+.project {
+  align-self: stretch;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 41, 0.97) 55.73%,
+    rgba(26, 26, 41, 0.97)
+  );
+  height: 840px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  padding-bottom: var(--padding-11xl);
+  text-align: left;
+  font-size: var(--title-size);
+  color: var(--light-colour);
+  font-family: var(--buttontext);
+}
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: var(--font-size-17xl);
+  }
+  .project {
+    height: auto;
+    gap: var(--gap-50xl);
+    padding-left: var(--padding-81xl);
+    padding-top: var(--padding-81xl);
+    padding-right: var(--padding-81xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 960px) {
+  .project {
+    height: auto;
+    padding-top: var(--padding-31xl);
+    box-sizing: border-box;
+  }
+}
