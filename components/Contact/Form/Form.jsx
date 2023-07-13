@@ -2,7 +2,7 @@ import styles from './Form.module.css';
 import { Button } from '../../UI/Button/Button';
 import { useForm } from 'react-hook-form';
 import { Input } from './Input/Input';
-import { $axios } from '../../../api/instance';
+import { $axios } from '../../../instance';
 import {toast} from "react-toastify"
 const Form = () => {
   const { handleSubmit, register, formState: {isValid, errors}, watch} = useForm({
