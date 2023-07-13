@@ -23,10 +23,11 @@ const Form = () => {
     }
     const endpoint = "/api/contact"
     const res = await $axios.post(endpoint, data)
-    if (res.statusText === "OK") {
+    if (res.status === 200) {
       toast.success('Сообщение успешно доставлено', {
         position: "top-center"
       })
+      alert("Сообщение успешно доставлено")
       reset()
     } else {
       toast.error(res.data, {
