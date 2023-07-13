@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 body {
   margin: 0;
   line-height: normal;
@@ -24,10 +24,13 @@ body {
   --background: #1a1a29;
   --color-mediumslateblue-100: #7562e0;
   --primary-colour: #7562e0;
-  --light-colour: #f5f5f5;
+  --light-colour: #32323f;
   --cardbackground: #31313f;
-
+  --secondary-color: #87878F
+  
   /* Gaps */
+
+  
   --gap-370xl: 389px;
   --gap-181xl: 200px;
   --gap-31xl: 50px;
@@ -44,6 +47,7 @@ body {
   --gap-mini: 15px;
   --gap-8xs: 5px;
   --gap-7xs: 6px;
+  --gap-6xs: 7px;
   --gap-3xl: 22px;
   --gap-33xl: 52px;
 

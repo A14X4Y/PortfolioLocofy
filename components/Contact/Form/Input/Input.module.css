@@ -1,0 +1,50 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-6xs);
+}
+
+.input2,
+.label {
+  position: relative;
+}
+.label {
+  font-size: var(--buttontext-size);
+  font-weight: 500;
+  font-family: var(--buttontext);
+  color: #87878f;
+  text-align: left;
+  opacity: 0.5;
+}
+
+.input {
+  border: 0;
+  background-color: var(--light-colour);
+  border-radius: var(--br-5xs);
+  font-family: var(--buttontext);
+  padding-left: 10px;
+  padding-left: 10px;
+  width: 472px;
+  height: 62px;
+  opacity: 1;
+  font-size: 20px;
+  color: white;
+}
+
+.textError {
+  font-size: var(--font-size-sm);
+  color: rgb(216, 115, 115);
+}
+
+.input.error {
+  border-color: red;
+  opacity: 0.8;
+}
+@media screen and (max-width: 420px) {
+  .input {
+    align-self: stretch;
+    width: 80vw;
+  }
+}

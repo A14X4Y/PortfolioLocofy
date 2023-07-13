@@ -9,7 +9,7 @@ const Hero = () => {
             <div className={styles.herosubtitle}>{`Привет, я `}</div>
             <div className={styles.herotitle}>Белоусов Алексей</div>
           </div>
-          <div className={styles.herotext1}>
+          <div className={styles.description}>
             Я Fullstack-разработчик:) Cоздаю удобный веб-интерфейс для конечных
             пользователей.
           </div>
@@ -46,4 +46,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export { Hero };

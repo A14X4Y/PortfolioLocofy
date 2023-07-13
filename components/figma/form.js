@@ -7,11 +7,11 @@ const Form = () => {
       </div>
       <div className={styles.forminputs}>
         <div className={styles.input}>
-          <div className={styles.label}>Name:</div>
+          <div className={styles.label}>Имя:</div>
           <img className={styles.inputIcon} alt="" src="/input.svg" />
         </div>
         <div className={styles.input1}>
-          <div className={styles.label1}>Message:</div>
+          <div className={styles.label1}>Email:</div>
           <input
             className={styles.input2}
             type="text"
@@ -20,7 +20,7 @@ const Form = () => {
           />
         </div>
         <div className={styles.input}>
-          <div className={styles.label2}>Email:</div>
+          <div className={styles.label2}>Сообщение:</div>
           <input className={styles.input4} type="text" maxLength minLength />
         </div>
       </div>

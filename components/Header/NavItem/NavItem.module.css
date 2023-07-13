@@ -1,0 +1,19 @@
+.navitemlink {
+  text-decoration: none;
+  position: relative;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  font-family: var(--buttontext);
+  color: var(--white);
+  text-align: left;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 85px;
+}
+
+.navitemlink.active {
+  color: var(--color-mediumslateblue-100);
+}
+.navitemlink:hover {
+  color: var(--color-mediumslateblue-100);
+}

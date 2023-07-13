@@ -1,0 +1,179 @@
+.herosubtitle,
+.herotitle {
+  position: relative;
+  font-weight: 600;
+}
+.herotitle {
+  font-size: var(--title-size);
+  color: var(--white);
+}
+.herotitletext {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xl);
+}
+.description,
+.textbutton {
+  position: relative;
+  font-size: var(--buttontext-size);
+  font-weight: 600;
+}
+.description {
+  align-self: stretch;
+}
+.textbutton {
+  font-family: var(--buttontext);
+  color: var(--white);
+  text-align: left;
+}
+.usericon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.buttoncontained {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xs) var(--padding-6xl);
+  background-color: var(--primary-colour);
+  border-radius: var(--br-5xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-7xs);
+  transition: 0.3s;
+}
+.buttoncontained:hover {
+  opacity: 0.8;
+}
+.eyeicon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.buttonoutline,
+.buttonscalltoaction,
+.herotext {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.buttonoutline {
+  cursor: pointer;
+  border: 2px solid var(--primary-colour);
+  padding: var(--padding-xs) var(--padding-15xl);
+  background-color: transparent;
+  border-radius: var(--br-5xs);
+  justify-content: center;
+  gap: var(--gap-8xs);
+  transform: 0.3s;
+}
+.buttonscalltoaction,
+.herotext {
+  justify-content: flex-start;
+  gap: var(--gap-20xl);
+}
+.herotext {
+  width: 516px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.background {
+  position: absolute;
+  margin: 0 !important;
+  width: calc(100% - 96px);
+  top: 98px;
+  right: 39px;
+  left: 57px;
+  border-radius: 50%;
+  background-color: var(--primary-colour);
+  height: 449px;
+  z-index: 0;
+}
+.myphotoIcon {
+  position: relative;
+  border-radius: var(--br-5xl);
+  width: 547px;
+  height: 547px;
+  object-fit: cover;
+  z-index: 1;
+}
+.heroimage {
+  flex-direction: column;
+  position: relative;
+}
+.hero,
+.heroimage,
+.herowrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  flex-direction: row;
+  gap: var(--gap-11xl);
+}
+.herowrapper {
+  align-self: stretch;
+  background-color: var(--background);
+  height: 655px;
+  flex-direction: column;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--white);
+  font-family: var(--buttontext);
+}
+@media screen and (max-width: 1200px) {
+  .herotitle {
+    font-size: var(--font-size-17xl);
+  }
+  .buttoncontained {
+    gap: var(--gap-7xs);
+  }
+  .buttonscalltoaction {
+    gap: var(--gap-mini);
+  }
+  .herotext {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .herosubtitle {
+    font-size: var(--font-size-xl);
+    text-align: right;
+  }
+  .herotitle {
+    font-size: var(--font-size-11xl);
+  }
+  .herotext {
+    flex-direction: column;
+  }
+  .background {
+    width: 250px;
+    height: 250px;
+    left: 20px;
+    top: 30px;
+  }
+  .myphotoIcon {
+    width: 300px;
+    height: 300px;
+    border-radius: var(--br-5xl);
+  }
+  .hero {
+    gap: var(--gap-0);
+  }
+}
+@media screen and (max-width: 720px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 420px) {
+  .buttonscalltoaction {
+    justify-content: center;
+  }
+}
