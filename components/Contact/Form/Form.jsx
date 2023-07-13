@@ -14,10 +14,6 @@ const Form = () => {
     },
   });
 
-
-
-
-
   const onSubmit = async (data) => {
     if (!isValid) {
       return
@@ -94,18 +90,6 @@ const Form = () => {
           },
 
         })}/>
-
-        {/* <Input register={...register} */}
-
-        {/* <div className={styles.input}>
-          <div className={styles.label2}>Сообщение:</div>
-          <input
-            className={styles.input4}
-            type="text"
-            maxLength
-            minLength
-          />
-        </div> */}
       </div>
       <Button variant="contained" type = "submit">Отправить</Button>
     </form>
