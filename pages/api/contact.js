@@ -1,7 +1,7 @@
 import axios from 'axios';
-
 const TOKEN = '5988811852:AAFens5-O5ay-5r16kGKWN62Tm03y0fF-n0';
 const chatId = 542880503;
+// const TOKEN = process.env.BOT_TELEGRAM_TOKEN
 
 export async function sendTelegramMessage(chatId = chatId, message) {
   try {

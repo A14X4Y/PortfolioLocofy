@@ -1,5 +1,5 @@
 import { Form } from './Form/Form';
-import styles from './contact.module.css';
+import styles from './Contact.module.css';
 import { SocialList } from './SocialList/SocialList';
 const Contact = () => {
   return (

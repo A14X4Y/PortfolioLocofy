@@ -1,5 +1,5 @@
 import { Button } from '../UI/Button/Button';
-import styles from './hero.module.css';
+import styles from './Hero.module.css';
 const Hero = () => {
   return (
     <div className={styles.herowrapper}>
