@@ -2,21 +2,15 @@ import { useCallback } from 'react';
 import { NavItem } from '../NavItem/NavItem';
 import styles from './Navigation.module.css';
 const Navigation = () => {
-  const onNavItemLink2Click = useCallback(() => {
+
+  const onScrollToProject = useCallback(() => {
     const anchor = document.querySelector('#project');
     if (anchor) {
       anchor.scrollIntoView({ block: 'start', behavior: 'instant' });
     }
   }, []);
 
-  const onNavItemLink1Click = useCallback(() => {
-    const anchor = document.querySelector('#project');
-    if (anchor) {
-      anchor.scrollIntoView({ block: 'start', behavior: 'instant' });
-    }
-  }, []);
-
-  const onNavItemLinkClick = useCallback(() => {
+  const onScrollToContact = useCallback(() => {
     const anchor = document.querySelector("#contact");
     if (anchor) {
       anchor.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -27,16 +21,16 @@ const Navigation = () => {
     <div className={styles.navlistlink}>
       <NavItem
         navItemLink="Обо мне"
-        onNavItemLink2Click={onNavItemLink2Click}
+        onNavItemLink2Click={onScrollToProject}
         active
       />
       <NavItem
         navItemLink="Проекты"
-        onNavItemLink2Click={onNavItemLink1Click}
+        onNavItemLink2Click={onScrollToProject}
       />
       <NavItem
         navItemLink="Контакты"
-        onNavItemLink2Click={onNavItemLinkClick}
+        onNavItemLink2Click={onScrollToContact}
       />
     </div>
   );

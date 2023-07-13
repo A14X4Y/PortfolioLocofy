@@ -1,6 +1,13 @@
 import { Button } from '../UI/Button/Button';
+import { useCallback } from 'react';
 import styles from './Hero.module.css';
 const Hero = () => {
+  const onScrollToProject = useCallback(() => {
+    const anchor = document.querySelector('#project');
+    if (anchor) {
+      anchor.scrollIntoView({ block: 'start', behavior: 'instant' });
+    }
+  }, []);
   return (
     <div className={styles.herowrapper}>
       <div className={styles.hero}>
@@ -22,7 +29,10 @@ const Hero = () => {
                 src="/usericon.svg"
               />
             </Button>
-            <Button variant="outline">
+            <Button
+              variant="outline"
+              onClick={onScrollToProject}
+            >
               Проекты
               <img
                 className={styles.eyeicon}

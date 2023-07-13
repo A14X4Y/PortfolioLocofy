@@ -11,7 +11,6 @@ const Button = ({
   href,
   ...props
 }) => {
-  console.log(className);
   return (
     <button
       className={classNames(cls.button, {}, [className, cls[variant]])}

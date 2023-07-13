@@ -3,9 +3,11 @@ import { Button } from '../../UI/Button/Button';
 import { useForm } from 'react-hook-form';
 import { Input } from './Input/Input';
 import { $axios } from '../../../instance';
-import {toast} from "react-toastify"
+import {toast, ToastContainer} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+
 const Form = () => {
-  const { handleSubmit, register, formState: {isValid, errors}, watch} = useForm({
+  const { handleSubmit, register, formState: {isValid, errors}, reset} = useForm({
     mode: 'onBlur',
     defaultValues: {
       name: '',
@@ -13,6 +15,7 @@ const Form = () => {
       message: '',
     },
   });
+
 
   const onSubmit = async (data) => {
     if (!isValid) {
@@ -24,6 +27,7 @@ const Form = () => {
       toast.success('Сообщение успешно доставлено', {
         position: "top-center"
       })
+      reset()
     } else {
       toast.error(res.data, {
         position: "top-center"
@@ -33,6 +37,7 @@ const Form = () => {
 
 
   return (
+
     <form
       className={styles.form}
       onSubmit={handleSubmit(onSubmit)}
@@ -91,8 +96,9 @@ const Form = () => {
 
         })}/>
       </div>
-      <Button variant="contained" type = "submit">Отправить</Button>
+      <Button variant="contained" type="submit">Отправить</Button>
     </form>
+
   );
 };
 

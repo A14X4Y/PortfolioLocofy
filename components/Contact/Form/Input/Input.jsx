@@ -9,7 +9,6 @@ const Input = ({
   errors,
   ...props
 }) => {
-  console.log(errors);
 
   return (
     <div className={styles.inputWrapper}>
