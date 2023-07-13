@@ -27,7 +27,6 @@ const Form = () => {
       toast.success('Сообщение успешно доставлено', {
         position: "top-center"
       })
-      alert("Сообщение успешно доставлено")
       reset()
     } else {
       toast.error(res.data, {
