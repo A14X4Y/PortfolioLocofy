@@ -1,0 +1,23 @@
+.postCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.postCard {
+  border-radius: var(--br-8xl);
+  background-color: var(--cardbackground);
+  width: 404px;
+  height: 500px;
+  flex-direction: column;
+  padding: var(--padding-base) 0;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--primary-colour);
+  font-family: var(--buttontext);
+}
