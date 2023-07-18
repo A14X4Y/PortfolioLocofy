@@ -1,6 +1,8 @@
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -14,6 +16,14 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // keystone.js
@@ -24,11 +34,22 @@ __export(keystone_exports, {
 module.exports = __toCommonJS(keystone_exports);
 var import_core2 = require("@keystone-6/core");
 
-// schema.js
+// keystone/schema.js
 var import_core = require("@keystone-6/core");
 var import_access = require("@keystone-6/core/access");
 var import_fields = require("@keystone-6/core/fields");
 var import_fields_document = require("@keystone-6/fields-document");
+
+// instance.js
+var import_axios = __toESM(require("axios"));
+var import_client = require("@apollo/client");
+var $axios = import_axios.default.create({
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
+
+// keystone/schema.js
 var lists = {
   User: (0, import_core.list)({
     access: import_access.allowAll,
@@ -47,6 +68,7 @@ var lists = {
   }),
   Post: (0, import_core.list)({
     access: import_access.allowAll,
+    // access: { ...allOperations(isSignedIn) },
     fields: {
       title: (0, import_fields.text)({ validation: { isRequired: true } }),
       content: (0, import_fields_document.document)({
@@ -87,6 +109,7 @@ var lists = {
     }
   }),
   Tag: (0, import_core.list)({
+    // access: allOperations(isSignedIn),
     access: import_access.allowAll,
     ui: {
       isHidden: true
@@ -98,7 +121,7 @@ var lists = {
   })
 };
 
-// auth.js
+// keystone/auth.js
 var import_crypto = require("crypto");
 var import_auth = require("@keystone-6/auth");
 var import_session = require("@keystone-6/core/session");
@@ -126,7 +149,7 @@ var keystone_default = withAuth(
   (0, import_core2.config)({
     db: {
       provider: "sqlite",
-      url: "file:./keystone.db"
+      url: "file:./keystone/keystone.db"
     },
     lists,
     session,

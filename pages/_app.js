@@ -4,7 +4,7 @@ import "./global.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>Portfolio</title>
         <meta
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-    </React.Fragment>
+    </>
   );
 }
 

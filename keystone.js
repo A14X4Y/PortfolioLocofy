@@ -2,16 +2,16 @@
 
 import { config } from '@keystone-6/core';
 
-import { lists } from './schema';
+import { lists } from './keystone/schema';
 
 
-import { withAuth, session } from './auth';
+import { withAuth, session } from './keystone/auth';
 
 export default withAuth(
   config({
     db: {
       provider: 'sqlite',
-      url: 'file:./keystone.db',
+      url: 'file:./keystone/keystone.db',
     },
     lists,
     session,

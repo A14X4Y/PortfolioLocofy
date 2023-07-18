@@ -44,9 +44,9 @@ async function getTelegramMessage() {
 
 export default function handler(req, res) {
   const body = req.body;
-  if (!body.message) {
-    return res.status(400).json({ data: 'В сообщение ничего нет' });
-  }
+  // if (!body.message) {
+  //   return res.status(400).json({ data: 'В сообщение ничего нет' });
+  // }
   try {
     sendTelegramMessage(chatId, JSON.stringify(body));
   } catch (error) {

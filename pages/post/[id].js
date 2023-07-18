@@ -24,6 +24,7 @@ export const getStaticProps = async ({ params }) => {
       id: id,
     },
   };
+  
   const { data } = await client.query({
     query: GET_POST_BY_ID,
     variables,
